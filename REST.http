@@ -1,4 +1,4 @@
-@backend = https://app-backend-xxxx.azurewebsites.net
+@backend = https://app-backend-2i5ckl6yk5ina.azurewebsites.net
 ###
 
 
@@ -7,8 +7,8 @@ POST {{backend}}/ask HTTP/1.1
 content-type: application/json
 
 {
-    "approach": "rtr", 
-    "question": "水素ハイブリット電車における水素供給システムついて教えてください。"
+    "approach": "rtr",
+    "question": "イマーシブナメディア空間について教えてください。"
 }
 
 ###
@@ -16,8 +16,36 @@ POST {{backend}}/ask HTTP/1.1
 content-type: application/json
 
 {
-    "approach": "rtr", 
-    "question": "私は鉄道会社に勤める技術者です。水素ハイブリット電車における水素供給システムついて箇条書きで教えてください。"
+    "approach": "rtr",
+    "question": "ワーケーションの取り組みについて教えてください"
+}
+
+
+###
+POST {{backend}}/ask HTTP/1.1
+content-type: application/json
+
+{
+    "approach": "rtr",
+    "question": "「神秘の青池散策！リゾートしらかみで行く白神山地 十二湖の旅」とは何ですか"
+}
+
+###
+POST {{backend}}/ask HTTP/1.1
+content-type: application/json
+
+{
+    "approach": "rtr",
+    "question": "「神秘の青池散策！リゾートしらかみで行く白神山地 十二湖の旅」とは何ですか"
+}
+
+###
+POST {{backend}}/ask HTTP/1.1
+content-type: application/json
+
+{
+    "approach": "rtr",
+    "question": "最近出た団体旅行商品を教えてください"
 }
 
 
@@ -25,24 +53,51 @@ content-type: application/json
 API Managementの動作確認
 ###
 
-@apimanagement = https://apim-xxxx.azure-api.net
+@apimanagement = https://apim-2i5ckl6yk5ina.azure-api.net
 ###
 POST {{apimanagement}}/api/ask HTTP/1.1
 Content-Type: application/json
 
 {
-    "approach": "rtr", 
+    "approach": "rtr",
+    "question": "水素ハイブリット電車における水素供給システムついて教えてください。"
+}
+
+製品
+- basicプランやstandardプランなど料金体系によって制限を付けたいとき
+- 提供先ごとに利用できるAPIを分けたいとき
+
+###
+POST {{apimanagement}}/api/ask HTTP/1.1
+Content-Type: application/json
+Ocp-Apim-Subscription-Key: ab8c502fca1d4af2abdf4cd6092f7820
+
+{
+    "approach": "rtr",
     "question": "水素ハイブリット電車における水素供給システムついて教えてください。"
 }
 
 
+# @apimanagement = https://apim-hziyrtwi2pnw6.azure-api.net
 
 ###
 POST {{apimanagement}}/api/ask HTTP/1.1
 Content-Type: application/json
-Ocp-Apim-Subscription-Key: xxxxxxxxxx
+Ocp-Apim-Subscription-Key: 62fad02ed67a4c40be08a1008f874aeb
 
 {
-    "approach": "rtr", 
+    "approach": "rtr",
+    "question": "水素ハイブリット電車における水素供給システムついて教えてください。"
+}
+
+# @apimanagement = https://apim-bc4thgxmhfzhs.azure-api.net
+
+###
+POST {{apimanagement}}/api/ask HTTP/1.1
+Content-Type: application/json
+Ocp-Apim-Subscription-Key: e9358596719f453ca4fcc1d85b61d99b
+
+{
+    "approach": "rtr",
     "question": "水素ハイブリット電車における水素供給システムついて教えてください。"
 }
